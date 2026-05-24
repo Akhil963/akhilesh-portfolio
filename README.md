@@ -2,7 +2,7 @@
 
 A modern, interactive personal portfolio website showcasing projects, skills, and experience. Features a sleek dark/light theme, smooth animations, and SendGrid email integration.
 
-**Live Demo:** [akhilesh-portfolio.vercel.app](https://akhilesh-portfolio.vercel.app)
+**Live Demo:** https://akhileshbhandakkar.codes/
 
 ---
 
