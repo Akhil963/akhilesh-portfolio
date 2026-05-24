@@ -187,28 +187,74 @@ document.querySelectorAll('[data-tilt]').forEach(el => {
 // ============ CONTACT FORM ============
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
-contactForm.addEventListener('submit', e => {
+const submitBtn = contactForm.querySelector('.submit-btn');
+const btnText = submitBtn.querySelector('.btn-text');
+const btnLoading = submitBtn.querySelector('.btn-loading');
+
+// API endpoint - automatically detects local vs production
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:5000/api/send-email'
+    : 'https://your-deployed-backend.vercel.app/api/send-email'; // Update this after deploying backend
+
+contactForm.addEventListener('submit', async e => {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
+
+    // Validation
     if (!name || !email || !subject || !message) {
         formMessage.textContent = 'Please fill in all fields.';
         formMessage.className = 'form-message error';
+        formMessage.style.display = 'block';
         return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         formMessage.textContent = 'Please enter a valid email.';
         formMessage.className = 'form-message error';
+        formMessage.style.display = 'block';
         return;
     }
-    const body = `Hi Akhilesh,\n\nName: ${name}\nEmail: ${email}\n\n${message}`;
-    window.location.href = `mailto:akhileshbhandakkar@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    formMessage.textContent = "Opening your email client...";
-    formMessage.className = 'form-message success';
-    contactForm.reset();
-    setTimeout(() => formMessage.style.display = 'none', 6000);
+
+    // Show loading state
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, subject, message }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+            formMessage.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
+            formMessage.className = 'form-message success';
+            contactForm.reset();
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 6000);
+        } else {
+            formMessage.textContent = `❌ Error: ${data.error || 'Failed to send message'}`;
+            formMessage.className = 'form-message error';
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
+        formMessage.textContent = '❌ Network error. Please try again later.';
+        formMessage.className = 'form-message error';
+    } finally {
+        // Hide loading state
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+        formMessage.style.display = 'block';
+    }
 });
 
 // ============ BACK TO TOP & SMOOTH SCROLL ============
