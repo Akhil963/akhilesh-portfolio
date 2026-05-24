@@ -194,7 +194,7 @@ const btnLoading = submitBtn.querySelector('.btn-loading');
 // API endpoint - automatically detects local vs production
 const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:5000/api/send-email'
-    : 'https://your-deployed-backend.vercel.app/api/send-email'; // Update this after deploying backend
+    : 'https://akhilesh-portfolio-backend.onrender.com/api/send-email';
 
 contactForm.addEventListener('submit', async e => {
     e.preventDefault();

@@ -9,16 +9,22 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5000',
+  'http://localhost:5501',
+  'http://127.0.0.1:5501',
+  'http://127.0.0.1:3000',
+  'https://akhilesh-portfolio.vercel.app',
+];
+
+// Add Render domain dynamically
+if (process.env.RENDER_EXTERNAL_URL) {
+  allowedOrigins.push(process.env.RENDER_EXTERNAL_URL);
+}
+
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5000',
-    'http://localhost:5501',
-    'http://127.0.0.1:5501',
-    'http://127.0.0.1:3000',
-    'https://akhilesh-portfolio.vercel.app',
-    // Add your production domain here
-  ],
+  origin: allowedOrigins,
   methods: ['POST', 'GET', 'OPTIONS'],
   credentials: true,
 }));
