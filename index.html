@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Akhilesh M. Bhandakkar — 3rd Year B.Tech CSE Student & Full-Stack Web Developer. View my projects, skills, and get in touch.">
+    <title>Akhilesh M. Bhandakkar — Full-Stack Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assest/img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="assest/img/logo.svg" alt="Akhilesh Logo" class="logo-img">
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+        <div class="hero-gradient-orb hero-orb-1"></div>
+        <div class="hero-gradient-orb hero-orb-2"></div>
+        <div class="hero-gradient-orb hero-orb-3"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Open to Opportunities
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Akhilesh</span>
+                    <span class="hero-wave">👋</span>
+                </h1>
+                <p class="hero-subtitle">Full-Stack Web Developer</p>
+                <p class="hero-tagline">3rd Year B.Tech CSE Student crafting modern web applications with React, Node.js
+                    & MongoDB</p>
+                <div class="hero-roles">
+                    <span class="role-badge"><i class="fab fa-react"></i> React Developer</span>
+                    <span class="role-badge"><i class="fab fa-node-js"></i> MERN Stack</span>
+                    <span class="role-badge"><i class="fas fa-code"></i> Problem Solver</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-glass">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="avatar-ring">
+                    <div class="hero-avatar" data-tilt>
+                        <img src="assest/img/1.jpg" alt="Akhilesh M. Bhandakkar">
+                    </div>
+                </div>
+                <div class="hero-floating-badge badge-1">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="hero-floating-badge badge-2">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="hero-floating-badge badge-3">
+                    <i class="fab fa-node-js"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal reveal-left">
+                    <div class="about-photo" data-tilt data-tilt-max="10">
+                        <img src="assest/img/2.jpg" alt="Akhilesh M. Bhandakkar">
+                    </div>
+                </div>
+                <div class="about-text reveal reveal-right">
+                    <h3>A Passionate Developer from <span class="gradient-text">Wardha, India</span></h3>
+                    <p>I'm a 3rd year B.Tech Computer Science student at Agnihotri College of Engineering, Nagthana,
+                        Wardha. I love building full-stack web applications that solve real-world problems.</p>
+                    <p>My journey in tech started with curiosity about how websites work. Today, I build complete web
+                        applications — from interactive frontends with React to scalable backends with Node.js and
+                        MongoDB. I'm seeking opportunities to grow as a developer and make a real impact.</p>
+                    <div class="about-stats">
+                        <div class="stat-item glass-card">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Projects Deployed</div>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">Hours Coding</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Education</span>
+                <h2 class="section-title">My Academic Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line" id="timelineLine"></div>
+
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-card glass-card" data-tilt data-tilt-max="5">
+                        <div class="timeline-date">2024 — Present</div>
+                        <h3>B.Tech — Computer Science & Engineering</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-university"></i>
+                            Agnihotri College of Engineering, Nagthana, Wardha
+                        </p>
+                        <p>Specializing in web technologies, data structures, algorithms, and software engineering.
+                            Actively building real-world projects alongside coursework.</p>
+                        <div class="timeline-tags">
+                            <span>Data Structures</span>
+                            <span>Web Development</span>
+                            <span>DBMS</span>
+                            <span>OS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-card glass-card" data-tilt data-tilt-max="5">
+                        <div class="timeline-date">2021 — 2024</div>
+                        <h3>Diploma — Computer Science & Engineering</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-university"></i>
+                            Shri Vyankatesh Polytechnic College, Wardha
+                        </p>
+                        <p>Completed Diploma in Computer Science, building a strong foundation in programming,
+                            networking, and database management. This is where my hands-on coding journey truly began.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>C/C++</span>
+                            <span>DBMS</span>
+                            <span>Networking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="timeline-card glass-card" data-tilt data-tilt-max="5">
+                        <div class="timeline-date">2021</div>
+                        <h3>Secondary (10th)</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-school"></i>
+                            Wardha, Maharashtra
+                        </p>
+                        <p>Built a strong academic foundation. First exposure to programming concepts ignited my passion
+                            for technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">Technologies I Work With</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #f7df1e;">
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <h4>JavaScript</h4>
+                    <p>ES6+, Async/Await, DOM APIs</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #61dafb;">
+                        <i class="devicon-react-original colored"></i>
+                    </div>
+                    <h4>React.js</h4>
+                    <p>Hooks, Context API, SPA</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #68a063;">
+                        <i class="devicon-nodejs-plain colored"></i>
+                    </div>
+                    <h4>Node.js</h4>
+                    <p>Server-Side JavaScript Runtime</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #ffffff;">
+                        <i class="devicon-express-original"></i>
+                    </div>
+                    <h4>Express.js</h4>
+                    <p>REST APIs, Auth, Middleware</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #47a248;">
+                        <i class="devicon-mongodb-plain colored"></i>
+                    </div>
+                    <h4>MongoDB</h4>
+                    <p>Mongoose, Aggregation, CRUD</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #e34f26;">
+                        <i class="devicon-html5-plain colored"></i>
+                    </div>
+                    <h4>HTML5</h4>
+                    <p>Semantic Markup, Accessibility</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #1572b6;">
+                        <i class="devicon-css3-plain colored"></i>
+                    </div>
+                    <h4>CSS3</h4>
+                    <p>Flexbox, Grid, Animations</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #38bdf8;">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                    </div>
+                    <h4>Tailwind CSS</h4>
+                    <p>Utility-First, Responsive Design</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #7952b3;">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                    </div>
+                    <h4>Bootstrap</h4>
+                    <p>Components, Grid System</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #3776ab;">
+                        <i class="devicon-python-plain colored"></i>
+                    </div>
+                    <h4>Python</h4>
+                    <p>Scripting, Automation, DSA</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #00599c;">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                    </div>
+                    <h4>C / C++</h4>
+                    <p>OOP, Data Structures, Algorithms</p>
+                </div>
+
+                <div class="skill-card glass-card reveal" data-tilt data-tilt-max="8">
+                    <div class="skill-icon" style="--glow: #f05032;">
+                        <i class="devicon-git-plain colored"></i>
+                    </div>
+                    <h4>Git & GitHub</h4>
+                    <p>Version Control, Collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card reveal" data-tilt data-tilt-max="5">
+                    <div class="project-image">
+                        <img src="assest/img/Ecommerce.PNG" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://amazon-clone-frontend-eqts.onrender.com" class="project-link-btn"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/Akhil963/ecommerce-Clone" class="project-link-btn outline"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Animated E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce with product catalog, shopping cart, user authentication, checkout
+                            flow, and admin dashboard for inventory management.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal" data-tilt data-tilt-max="5">
+                    <div class="project-image">
+                        <img src="assest/img/SkillExchange.PNG" alt="Skill Exchange Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://skillexchange-platform.onrender.com/" class="project-link-btn"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/Akhil963/skillExchange-platform"
+                                    class="project-link-btn outline" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Skill Exchange Platform</h3>
+                        <p>A platform where users can exchange skills and knowledge. Features user profiles, skill
+                            matching, messaging, and session scheduling.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML + CSS</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal" data-tilt data-tilt-max="5">
+                    <div class="project-image">
+                        <img src="assest/img/onlineAttendanceSystem.PNG" alt="Online Attendance System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://attendance-frontend-no9n.onrender.com" class="project-link-btn"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/Akhil963/Online-Attendance" class="project-link-btn outline"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Online Attendance System (OAS)</h3>
+                        <p>Web-based attendance management with real-time tracking, admin dashboard, email/SMS
+                            notifications via SendGrid & Twilio, and detailed analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Have an opportunity or want to collaborate? I'd love to hear from you.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal reveal-left">
+                    <div class="contact-card glass-card">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:akhileshbhandakkar@gmail.com">akhileshbhandakkar@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Wardha, Maharashtra, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4>Status</h4>
+                                <p>3rd Year B.Tech CSE — Open to Internships & Opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/akhilesh-bhandakkar-a48479251" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Akhil963" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:akhileshbhandakkar@gmail.com" aria-label="Email" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form glass-card reveal reveal-right" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required placeholder=" ">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assest/img/logo.svg" alt="Akhilesh Logo" class="footer-logo">
+                    <p>3rd Year B.Tech CSE Student</p>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-connect">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/akhilesh-bhandakkar-a48479251" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Akhil963" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:akhileshbhandakkar@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Akhilesh M. Bhandakkar. Crafted with <i class="fas fa-heart"
+                        style="color: #ff4757;"></i></p>
+            </div>
+        </div>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
