@@ -18,9 +18,14 @@ const allowedOrigins = [
   'https://akhilesh-portfolio.vercel.app',
 ];
 
-// Add Render domain dynamically
+// Add Render domains dynamically
 if (process.env.RENDER_EXTERNAL_URL) {
   allowedOrigins.push(process.env.RENDER_EXTERNAL_URL);
+}
+
+// Add frontend URL if provided
+if (process.env.FRONTEND_URL) {
+  allowedOrigins.push(process.env.FRONTEND_URL);
 }
 
 app.use(cors({
